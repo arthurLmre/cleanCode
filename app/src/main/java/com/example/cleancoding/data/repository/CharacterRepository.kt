@@ -27,7 +27,7 @@ private class CharacterRepositoryImpl(
 }
 interface CharacterRepository {
     fun getPaginatedList(scope: CoroutineScope): LiveData<PagedList<Character>>
-    
+
     companion object {
         val instance: CharacterRepository by lazy {
             CharacterRepositoryImpl(HttpClientManager.instance.createApi())
